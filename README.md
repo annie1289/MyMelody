@@ -1,31 +1,10 @@
-# PROJECT 4 README <!-- omit in toc -->
-
-> The Project Planning section **should be completed** for your project pitch with instructors.
->
-> To ensure correct Markdown, copy and paste the raw template code into your project repo README file. Remove ALL template instructions and replace with your project details.
-
-- [Overview](#overview)
-- [MVP](#mvp)
-  - [Goals](#goals)
-  - [Libraries and Dependencies](#libraries-and-dependencies)
-  - [Client (Front End)](#client-front-end)
-    - [Wireframes](#wireframes)
-    - [Component Tree](#component-tree)
-    - [Component Hierarchy](#component-hierarchy)
-    - [Component Breakdown](#component-breakdown)
-    - [Time Estimates](#time-estimates)
-  - [Server (Back End)](#server-back-end)
-    - [ERD Model](#erd-model)
-- [Post-MVP](#post-mvp)
-- [Code Showcase](#code-showcase)
-- [Code Issues & Resolutions](#code-issues--resolutions)
+# PROJECT 4 README
 
 <br>
 
 ## Overview
 
-_**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
-
+_**Project Title** My Melody is an app that allows users to track their favorite songs and albums. They can edit, update, and delete these entries and then view the most popular artists among all users across the platform. 
 
 <br>
 
@@ -33,17 +12,17 @@ _**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum ri
 
 > The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
 
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+ *Create User
+ *Edit and Delete User
+ *View top artists across the platform regardless of user 
+ *View, Create, Edit, and Delete Song Posts
+ *View, Create, Edit, and Delete Album Posts
 
 <br>
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+*Create a full-stack, full-CRUD app with really nice, sleek styling
 
 <br>
 
@@ -53,19 +32,16 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | JavaScript library|
+|   React Router   | A tool that allows you to handle routes in a web app, using dynamic routing|
+| React Material UI | React UI framework that will help in the creation of a navigation bar and various buttons |
+|     Ruby on Rails      | back-end framework |
 
 <br>
 
 ### Client (Front End)
 
 #### Wireframes
-
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
 ![Dummy Link](url)
 
@@ -129,15 +105,13 @@ src
 | Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
 <br>
 
 ### Server (Back End)
 
 #### ERD Model
-
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+![ERD My Melody] (https://viewer.diagrams.net/?highlight=0000ff&edit=_blank&layers=1&nav=1&title=MyMelodyERD.png#R7Vltc9o4EP41fISxLWPCR16bTtubDOlde%2FclI%2BzFaCJbPlkkuL%2F%2BJEsCv0BeuDYlmTATQI9Wq9V6V89u6KBJsv3Acbb%2BwiKgHc%2BJth007Xje0A%2FkuwIKDQSur4GYk0hD7h64Jj%2FAgI5BNySCvCYoGKOCZHUwZGkKoahhmHN2XxdbMVrfNcMxtIDrENM2%2Bo1EYq3RCy%2FY45dA4rXd2Q2GemaJw9uYs01q9ut4aFW%2B9HSCrS5z0HyNI3ZfgdCsgyacMaG%2FJdsJUOVa6za9bn5kdmc3h1Q8ZYFdcYfpBqzJAZVrx5kyTxTGJcG%2FG2XTOME8JmkHjeSsk23luwTLkym8K1im5%2FzKnICt6GJKYrMulMYBr09HEDKOBWFGRnoQOCUp7LeW32LzWRq4tEDO0tiC8qjLpqDEsia25k3kpPNSWAk9eaEmj5maZzi1mHS953Tl3%2FXVp4qFVZGHDH8pM2VqCRVE2ta%2FRovJ5WhxxvaSJP5z8fnVmBtywAKiG2w9%2FJUkkAucZGds9CaLlNHd12V0DvymTDoOK5AXYyiZxZvI8XzxvAT0ahZ7d8AFkZwx0jfbtLz7xuaem2pLx0xKrWh5xa%2BIvHrReCUTyzCe65nxHCeEKq68BHoHSqu6okRClZA6j%2BDsFiaMMl7ujRwHoSBQM5ZAlJjaoSI09WfuvG%2B2aC9uUYXlAnku2FYgQx0fgCUgeCFFzCxCSC8pLJv0AjTcvS5cs8n9nkPdwDDfusqfFsSGt%2BPdVnvukl8MfR2hsv4boDIVrPl5ctkR3nqRvFZuSXECR6%2F333a7QIIJPUvWyXCe3zMe3UQklpf0%2BbnuNVPg841etpL0pY%2FxmAXv9NagN99psZvfJrTBryK0Tx9%2FzP4Qt87Cvdnwf%2FBaxINv3aF%2FgOUaTw7SaKSaYDmaLVgKX9kXnBZ1l0uZefnAps7uAdhW192FA0StPrnhz7bzKr7pH3CNxThQyZF3dfWH3GV2uGKk7EbMs%2FGceunheg2P52zDQzCrqh1wQxFCzsOKhEwyEC1F5dPbHft%2FPNC3ULZgutwk51m2HOwV31vw9xb8Vdcf7y3426lRWgXJk2jWLhg2ihRLXy%2FScx9mtOAAo%2F2CEkV6iBff5aDr9Byvb5G%2F1YJePxhaYLo1KvSoqI6ugMv8UVxowC0R30sFSFZaeqwUuj3H7ZvxXp8aFJVBS5ssn67NoRkXaxazFNPZHn1ymSWdV9Yz9X916NLk0eLid9Vou1LKxiY6sUbz%2FMHDio7UaDLEcFERy5RA%2FoDBjaISuW4jG7TGn1sADn5OuhxIkEfDz4a7axPIhLvT833%2F%2BeFeS9jTQvsMwxgNGmE8PDGM%2FWar0VR0cqshh%2FvfDLX4%2FndZNPsP)
 
 <br>
 
@@ -145,7 +119,10 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+> 
+* Choose a drop-down to view rankings of most popular songs and albums as well
+* View other users profiles
+*
 
 ***
 
