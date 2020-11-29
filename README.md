@@ -49,7 +49,7 @@ _**Project Title** My Melody is an app that allows users to track their favorite
 - Desktop Landing
 
 
-![Color Palette Used] (https://colorhunt.co/palette/14114)
+![Color Palette Used] (Color Hunt Palette 14114.png)
 
 
 #### Component Tree
