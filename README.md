@@ -48,6 +48,7 @@
 
 - Desktop Landing
 
+#### Color Scheme from http://colormind.io/:
 
 ![Color Palette Used](colors.png)
 
