@@ -42,7 +42,9 @@
 
 #### Wireframes
 
-![Wireframes on Figma](https://www.figma.com/file/Rkt1PALvbv5V0gKQVreX2i/My-Melody-Wireframes?node-id=0%3A1)
+Wireframes on Figma
+
+https://www.figma.com/file/Rkt1PALvbv5V0gKQVreX2i/My-Melody-Wireframes?node-id=0%3A1
 
 
 #### Color Scheme from http://colormind.io/:
