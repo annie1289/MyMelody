@@ -49,7 +49,7 @@
 - Desktop Landing
 
 
-![Color Palette Used] (https://colorhunt.co/palette/14114)
+![Color Palette Used] (ColourPalette.png)
 
 
 #### Component Tree
