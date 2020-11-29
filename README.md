@@ -4,7 +4,7 @@
 
 ## Overview
 
-_**Project Title** My Melody is an app that allows users to track their favorite songs and albums. They can edit, update, and delete these entries and then view the most popular artists among all users across the platform. 
+**Project Title** My Melody is an app that allows users to track their favorite songs and albums. They can edit, update, and delete these entries and then view the most popular artists among all users across the platform. 
 
 <br>
 
@@ -49,7 +49,7 @@ _**Project Title** My Melody is an app that allows users to track their favorite
 - Desktop Landing
 
 
-![Color Palette Used] (ColorHuntPalette14114.png)
+![Color Palette Used] (https://colorhunt.co/palette/14114)
 
 
 #### Component Tree
