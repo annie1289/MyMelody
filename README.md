@@ -49,7 +49,7 @@
 - Desktop Landing
 
 
-![Color Palette Used] (ColourPalette.png)
+![Color Palette Used](colors.png)
 
 
 #### Component Tree
