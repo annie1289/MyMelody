@@ -13,8 +13,6 @@
 > The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
 
  *Create User
- *Edit and Delete User
- *View top artists across the platform regardless of user 
  *View, Create, Edit, and Delete Song Posts
  *View, Create, Edit, and Delete Album Posts
 
@@ -44,9 +42,8 @@
 
 #### Wireframes
 
-![Dummy Link](url)
+![Wireframes on Figma](https://www.figma.com/file/Rkt1PALvbv5V0gKQVreX2i/My-Melody-Wireframes?node-id=0%3A1)
 
-- Desktop Landing
 
 #### Color Scheme from http://colormind.io/:
 
@@ -107,6 +104,8 @@ src
 ## Post-MVP
 
 > 
+*Edit and Delete User
+*View top artists across the platform regardless of user 
 * Choose a drop-down to view rankings of most popular songs and albums as well
 * View other users profiles
 * Animations
