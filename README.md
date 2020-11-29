@@ -35,7 +35,8 @@ _**Project Title** My Melody is an app that allows users to track their favorite
 |      React       | JavaScript library|
 |   React Router   | A tool that allows you to handle routes in a web app, using dynamic routing|
 | React Material UI | React UI framework that will help in the creation of a navigation bar and various buttons |
-|     Ruby on Rails      | back-end framework |
+|     CORS      | allow for requests from outside domains|
+|     Rails      | back-end framework |
 
 <br>
 
@@ -47,25 +48,9 @@ _**Project Title** My Melody is an app that allows users to track their favorite
 
 - Desktop Landing
 
-![Dummy Link](url)
 
-- Desktop Hero
+![Color Palette Used] (https://colorhunt.co/palette/14114)
 
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
 
 #### Component Tree
 
@@ -123,7 +108,7 @@ src
 > 
 * Choose a drop-down to view rankings of most popular songs and albums as well
 * View other users profiles
-*
+* Animations
 
 ***
 
