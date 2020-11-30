@@ -28,10 +28,10 @@
 
 > The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
 
- *Create User
- *Authenitifacation
- *View, Create, Edit, and Delete Song Posts
- *View, Create, Edit, and Delete Album Posts
+ * Create User
+ * Authenitification
+ * View, Create, Edit, and Delete Song Posts
+ * View, Create, Edit, and Delete Album Posts
 
 <br>
 
