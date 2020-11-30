@@ -1,5 +1,21 @@
 # PROJECT 4 README
 
+- [Overview](#overview)
+- [MVP](#mvp)
+  - [Goals](#goals)
+  - [Libraries and Dependencies](#libraries-and-dependencies)
+  - [Client (Front End)](#client-front-end)
+    - [Wireframes](#wireframes)
+    - [Component Tree](#component-tree)
+    - [Component Hierarchy](#component-hierarchy)
+    - [Component Breakdown](#component-breakdown)
+    - [Time Estimates](#time-estimates)
+  - [Server (Back End)](#server-back-end)
+    - [ERD Model](#erd-model)
+- [Post-MVP](#post-mvp)
+- [Code Showcase](#code-showcase)
+- [Code Issues & Resolutions](#code-issues--resolutions)
+
 <br>
 
 ## Overview
@@ -13,6 +29,7 @@
 > The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
 
  *Create User
+ *Authenitifacation
  *View, Create, Edit, and Delete Song Posts
  *View, Create, Edit, and Delete Album Posts
 
@@ -73,8 +90,7 @@ src
       |__src/
             |__components/
                   |__Header.jsx
-                  |__Footer.jsx
-                  
+                  |__Footer.jsx    
             |__containers/
                   |__MainContainer.jsx
             |__screens/
