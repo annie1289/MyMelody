@@ -65,12 +65,32 @@ https://www.figma.com/file/Rkt1PALvbv5V0gKQVreX2i/My-Melody-Wireframes?node-id=0
 src
 |__ assets/
       |__ fonts
-      |__ graphics
       |__ images
-      |__ mockups
-|__ components/
-      |__ Header.jsx
+|__ client
+      |__App.jsx
+      |__Index.jsx
+      |__src/
+            |__components/
+                  |__Header.jsx
+            |__containers/
+                  |__MainContainer.jsx
+            |__screens/
+                  |__Login.jsx
+                  |__Registration.jsx
+                  |__MainLanding.jsx
+                  |__CreateSong.jsx
+                  |__EditDeleteSong.jsx
+                  |__CreateAlbum.jsx
+                  |__EditDeleteAlbum.jsx
+                  |__Favorites.jsx
+                  |__Charts.jsx
+                  
 |__ services/
+      |__apiConfig.js
+      |__auth.js
+      |__users.js
+      |__songs.js
+      |__albums.js
 
 ```
 
