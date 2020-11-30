@@ -119,7 +119,7 @@ src
 
 [Component tree](https://whimsical.com/mymelody-Fqths5vJBtAMVQxMXjciG1)
 
-#### Time Estimates4
+#### Time Estimates
 
 > Use this section to estimate the time necessary to build out each of the components you've described above.
 
@@ -154,8 +154,8 @@ src
 ## Post-MVP
 
 > 
-*Edit and Delete User
-*View top artists across the platform regardless of user 
+* Edit and Delete User
+* View top artists across the platform regardless of user 
 * Choose a drop-down to view rankings of most popular songs and albums as well
 * View other users profiles
 * Animations
