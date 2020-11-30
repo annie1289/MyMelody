@@ -56,6 +56,7 @@ https://www.figma.com/file/Rkt1PALvbv5V0gKQVreX2i/My-Melody-Wireframes?node-id=0
 
 > Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
 
+
 #### Component Hierarchy
 
 > Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
@@ -72,6 +73,8 @@ src
       |__src/
             |__components/
                   |__Header.jsx
+                  |__Footer.jsx
+                  
             |__containers/
                   |__MainContainer.jsx
             |__screens/
@@ -79,9 +82,9 @@ src
                   |__Registration.jsx
                   |__MainLanding.jsx
                   |__CreateSong.jsx
-                  |__EditDeleteSong.jsx
+                  |__EditSong.jsx
                   |__CreateAlbum.jsx
-                  |__EditDeleteAlbum.jsx
+                  |__EditAlbum.jsx
                   |__Favorites.jsx
                   |__Charts.jsx
                   
@@ -98,17 +101,26 @@ src
 
 > Use this section to include a link to your component tree.
 
-[Component tree](url)
+[Component tree](https://whimsical.com/mymelody-Fqths5vJBtAMVQxMXjciG1)
 
-#### Time Estimates
+#### Time Estimates4
 
 > Use this section to estimate the time necessary to build out each of the components you've described above.
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Setup Back end      |    H     |     5 hrs      |          |        |
+| Authentification    |    H     |     5 hrs      |          |        |
+| Full CRUD           |    H     |     10 hrs      |          |        |
+|  Header and Footer  |    H     |     3 hrs      |          |        |
+|   Main Landing Page |    H     |     3 hrs      |          |        |
+|  Create Pages       |    H     |     7 hrs      |          |        |
+|Registration Screen  |    H     |     3 hrs      |          |        |
+|      Favorites Page |    H     |     5 hrs      |          |        |
+|     CSS Styling     |    H     |     3 hrs      |          |        |
+|      Fix Bugs       |    L     |     3 hrs      |          |        |
+
+| TOTAL               |          |     47 hrs      |           |        |
 
 
 <br>
