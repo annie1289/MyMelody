@@ -1,10 +1,13 @@
 class ArtistsController < ApplicationController
   before_action :set_artist, only: [:show, :update, :destroy]
-
+  before_action :authorize_request, only: [:create, :update, :destroy]
   # GET /users
   def index
     @user = User.find(params[:user_id])
     @artists = @user.artists
+
+    # @artists = @current_user.artists
+    # @artists = Artist.all
 
     render json: @artists
   end
@@ -17,7 +20,8 @@ class ArtistsController < ApplicationController
   # POST /users
   def create
     # @user = User.find(params[:user_id])
-    @artist = artist.new(artist_params)
+    @artist = Artist.new(artist_params)
+    @artist.user = @current_user
     # @user.artists << @artist
     # or
     # @artist.user = @user
@@ -51,7 +55,7 @@ class ArtistsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_artist
-      @artist = artist.find(params[:id])
+      @artist = Artist.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
