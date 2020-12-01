@@ -1,7 +1,7 @@
-class CreateAlbums < ActiveRecord::Migration[6.0]
+class CreateArtists < ActiveRecord::Migration[6.0]
   def change
-    create_table :albums do |t|
-      t.string :content
+    create_table :artists do |t|
+      t.string :name
       t.string :imgURL
       t.references :user, null: false, foreign_key: true
 
