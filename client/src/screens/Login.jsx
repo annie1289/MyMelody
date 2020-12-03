@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Login'
 // from David's tasteville code for login 
 
 export default function Login(props) {
@@ -42,7 +43,7 @@ export default function Login(props) {
       <br />
       <br />
       <button>Login</button> <br/>
-      <Link to='/register'>Register for an account</Link>
+      <Link to='/registration'>Register for an account</Link>
     
     </form>
   )

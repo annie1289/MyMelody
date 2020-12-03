@@ -2,11 +2,13 @@ import React from 'react'
 import {useState, useEffect} from 'react'
 import { Switch, Route, useHistory } from 'react-router-dom'
 import './App.css';
-import Header from './components/Header'
 import MainContainer from './containers/MainContainer';
 import Registration from './screens/Registration';
 import Login from './screens/Login';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
+import Layout from './layouts/Layout';
+import MainLanding from './screens/MainLanding'
+
 
 
 function App() {
@@ -40,27 +42,29 @@ function App() {
     setCurrentUser(null);
     localStorage.removeItem('authToken');
     removeToken();
-    history.push('/');
+    history.push('/login');
   }
   return (
-    <div className="App"
+    <Layout
       currentUser={currentUser}
       handleLogout={handleLogout}
     >
-      <h1>My Melody</h1>
-      {/* <Header/> */}
       <Switch>
-        <Route exact path='/login'>
+        <Route path='/login'>
           <Login handleLogin={handleLogin}/>
         </Route>
-        <Route exact path='/registration'>
-        <Registration handleRegister={handleRegister} />
-        </Route>
-        <Route path='/'>
+        <Route path='/registration'>
+          <Registration handleRegister={handleRegister} />
+          </Route>
+        <Route path='/container'>
         <MainContainer currentUser={currentUser} />
+      </Route>
+      <Route path='/'>
+        <MainLanding/>
         </Route>
+
         </Switch>
-    </div>
+    </Layout>
   );
 }
 
