@@ -7,4 +7,5 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6 }
 
   has_many :artists
+  has_many :songs
 end

@@ -1,9 +1,10 @@
 class SongsController < ApplicationController
   before_action :set_song, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: [:index, :create, :update, :destroy]
 
   # GET /artists
   def index
-    @songs = Song.all
+    @songs = @current_user.songs
     render json: @songs
   end
 
@@ -15,7 +16,9 @@ class SongsController < ApplicationController
   # POST /artists
   def create
     # @artist = artist.find(params[:artist_id])
-    @song = song.new(song_params)
+    @song = Song.new(song_params)
+    @song.user = @current_user
+
     # @artist.songs << @song
     # or
     # @song.artist = @artist
