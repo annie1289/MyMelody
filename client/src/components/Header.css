@@ -1,5 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap");
 .header{
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  background-color: #D49985;
+  font-family: 'ZCOOL KuaiLe', cursive;
+
+}
+.icon{
+  margin-left: 50px;
+  margin-top: 40px;
+
+  
+}
+.mainTitle{
+align-items: center;
+font-size: 40px;
+
+}
+
+.intro, .userBanner{
+  margin-top: 45px;
+  margin-left: 100px;
+  
+
+}
+
+.logout{
+  margin-left: 50px;
+  width: 70px;
+  height: 40px;
+  margin-top: 30px;
+  font-weight: 3px;
+  background-color: rgb(173, 169, 173);
+  border-color: black;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.logout:hover {
+  background-color: #874647; /* Green */
+  color: white;
 }
 

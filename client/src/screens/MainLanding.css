@@ -1,0 +1,8 @@
+.create-song, .create-artist{
+  padding: 20px;
+}
+
+.create-song{
+  margin-bottom: 20px;
+  margin-top: 20px;
+}

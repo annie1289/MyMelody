@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function AddArtist(props) {
-  console.log(props)
   const [formData, setFormData] = useState({
     name: "",
     imgURL: ""

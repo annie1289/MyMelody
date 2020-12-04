@@ -1,0 +1,29 @@
+.artists, .songs{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #F7E2CD;
+
+}
+
+img{
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+}
+
+.detes{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.edit, .delete{
+  width: 50px;
+  align-items: center;
+}
+
+.buttons{
+/* margin-left: 50px; */
+}

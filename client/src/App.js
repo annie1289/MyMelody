@@ -7,7 +7,8 @@ import Registration from './screens/Registration';
 import Login from './screens/Login';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 import Layout from './layouts/Layout';
-import Artists from './components/Artists';
+import MainLanding from './screens/MainLanding';
+import Footer from './components/Footer';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -27,7 +28,7 @@ function App() {
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push('/artists');
   }
 
   const handleRegister = async (registerData) => {
@@ -54,17 +55,15 @@ function App() {
         <Route path='/registration'>
           <Registration handleRegister={handleRegister} />
           </Route>
-        <Route path='/'>
-        <MainContainer currentUser={currentUser} />
-      </Route>
-      {/* <Route path='/'>
+               <Route path='/home'>
         <MainLanding/>
-        </Route> */}
-        <Route path='/artists'>
-        <Artists/>
         </Route>
 
-        </Switch>
+      <Route path='/'>
+        <MainContainer currentUser={currentUser}/>
+        </Route>
+       
+      </Switch>
     </Layout>
   );
 }
