@@ -8,8 +8,8 @@ export default function MainLanding() {
       <Link to='/CreateSong'>
         <button className = "create-song">Add Song</button>
       </Link>
-      <Link to='/CreateAlbum'>
-        <button className = "create-album">Add Album</button>
+      <Link to='/CreateArtist'>
+        <button className = "create-artist">Add Artist</button>
       </Link>
       
 </div>

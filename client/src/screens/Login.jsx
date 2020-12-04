@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Login'
-// from David's tasteville code for login 
 
 export default function Login(props) {
   const [formData, setFormData] = useState({

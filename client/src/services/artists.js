@@ -5,13 +5,15 @@ export const getAllArtists = async () => {
   return resp.data;
 };
 
+
 export const getOneArtist = async (id) => {
   const resp = await api.get(`/artists/${id}`);
   return resp.data;
 }
 
 export const postArtist = async (artistData) => {
-  const resp = await api.post('/artists', {artist: artistData});
+  const resp = await api.post('/artists', { artist: artistData });
+  console.log(resp.data)
   return resp.data;
 }
 

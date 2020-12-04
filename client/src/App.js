@@ -7,9 +7,7 @@ import Registration from './screens/Registration';
 import Login from './screens/Login';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 import Layout from './layouts/Layout';
-import MainLanding from './screens/MainLanding'
-
-
+import Artists from './components/Artists';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -20,7 +18,7 @@ function App() {
       const userData = await verifyUser();
       setCurrentUser(userData);
       if (!userData) {
-        history.push('/')
+        history.push('/login')
       }
     }
     handleVerify();
@@ -56,11 +54,14 @@ function App() {
         <Route path='/registration'>
           <Registration handleRegister={handleRegister} />
           </Route>
-        <Route path='/container'>
+        <Route path='/'>
         <MainContainer currentUser={currentUser} />
       </Route>
-      <Route path='/'>
+      {/* <Route path='/'>
         <MainLanding/>
+        </Route> */}
+        <Route path='/artists'>
+        <Artists/>
         </Route>
 
         </Switch>

@@ -3,9 +3,7 @@ class SongsController < ApplicationController
 
   # GET /artists
   def index
-    @artist = Artist.find(params[:artist_id])
-    @songs = @artist.songs
-
+    @songs = Song.all
     render json: @songs
   end
 

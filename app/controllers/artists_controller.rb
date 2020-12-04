@@ -1,14 +1,9 @@
 class ArtistsController < ApplicationController
   before_action :set_artist, only: [:show, :update, :destroy]
-  before_action :authorize_request, only: [:create, :update, :destroy]
+  before_action :authorize_request, only: [:index, :create, :update, :destroy, :my_artists]
   # GET /users
   def index
-    @user = User.find(params[:user_id])
-    @artists = @user.artists
-
-    # @artists = @current_user.artists
-    # @artists = Artist.all
-
+    @artists = @current_user.artists
     render json: @artists
   end
 
@@ -19,7 +14,6 @@ class ArtistsController < ApplicationController
 
   # POST /users
   def create
-    # @user = User.find(params[:user_id])
     @artist = Artist.new(artist_params)
     @artist.user = @current_user
     # @user.artists << @artist
@@ -46,6 +40,10 @@ class ArtistsController < ApplicationController
     @artist.destroy
   end
 
+def my_artists 
+  @my_artists = @current_user.artists 
+  render json: @my_artists
+end
 
   def find_all_artists 
     @artists = artist.all
