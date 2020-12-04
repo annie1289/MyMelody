@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :songs
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'
-  resources :users, only: :create
+  resources :users
   # get '/users/:user_id/artists', to: 'artists#my_artists'
 end
