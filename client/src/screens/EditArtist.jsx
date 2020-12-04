@@ -51,7 +51,7 @@ export default function EditArtist(props) {
           onChange={handleChange}
         />
       </label>
-      <Link to={`/artists`}><button>Submit</button></Link>
+      <button>Submit</button>
     </form>
   )
 }

@@ -5,7 +5,7 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 import { makeStyles } from '@material-ui/core/styles';
 import './Footer.css'
 
-export default function Footer(props) {
+export default function Footer() {
   const useStyles = makeStyles((theme) => ({
     root: {
       display: 'flex',
@@ -19,22 +19,16 @@ export default function Footer(props) {
 
   const classes = useStyles();
 
-  const { currentUser} = props;
-
   return (
     <div className="footer">
     
           
-         <ButtonGroup className = "buttons" size="large" color="primary" aria-label="large outlined primary button group">
+          <ButtonGroup className = "buttons" size="large" color="primary" aria-label="large outlined primary button group">
         <Link to ='/home'><Button className = "homeb">Home</Button> </Link>
         <Link to = '/artists'><Button className = "favb">My Favorites</Button> </Link>
         <Link to='/charts'><Button className = "chartb">Charts</Button></Link>
             </ButtonGroup>
-        
-         
-   
     </div>
-
   
   )
 }

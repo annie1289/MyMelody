@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import { Route, useHistory, Switch } from 'react-router-dom';
-// import { Link } from 'react-router-dom'
 import Songs from '../components/Songs'
 import { getAllSongs } from '../services/songs'
 import Artists from '../components/Artists'
@@ -10,6 +9,7 @@ import AddArtist from '../screens/addartist/AddArtist';
 import './MainContainer.css'
 import EditArtist from '../screens/EditArtist'
 import Footer from '../components/Footer';
+import MySongs from '../components/MySongs';
 export default function MainContainer(props) {
 
   const [songs, setSongs] = useState([]);
@@ -27,7 +27,7 @@ export default function MainContainer(props) {
     }
     fetchArtists();
     fetchSongs();
-  }, [])
+  }, [props.currentUser])
 
   const handleCreate = async (artistData) => {
     const newArtist = await postArtist(artistData);
@@ -49,22 +49,18 @@ export default function MainContainer(props) {
   }
   return (
     <div className="main">
-      <Artists artists={artists} currentUser={props.currentUser} handleDelete={handleDelete} />
-      <Songs songs={songs}/>
-      <Switch>
-      <Route path='/artists/:id/edit'>Edit Artist
+       <Route path='/artists/:id/edit'>Edit Artist
          <EditArtist artists={artists} handleUpdate={handleUpdate}/>
-      </Route>
-      < br/>
-      <Route path='/addartist'>
-        <AddArtist handleCreate={handleCreate} />
-      </Route>
-      <br/>
+      </Route> 
+            <br/>
+        <Route path='/addartist'>
+          <AddArtist handleCreate={handleCreate} />
+        </Route>
+            <br/>
         <Route path='/artists'>
           <Artists currentUser={props.currentUser} handleDelete={handleDelete} artists={artists}/>
-       <Songs songs={songs}/>
+          <MySongs songs={songs} currentUser={props.currentUser} handleDelete={handleDelete}/>
         </Route>
-      </Switch>
       <Footer/>
     </div>
   )

@@ -3,24 +3,24 @@ import { getAllArtists } from '../services/artists'
 import './Artists.css'
 import { Link } from 'react-router-dom'
 export default function Artists(props) {
-  const [myArtists, setMyArtists] = useState([])
+  // const [myArtists, setMyArtists] = useState([])
 
-  useEffect(() => {
-    const fetchMyArtists = async () => {
-      const myArtistData = await getAllArtists()
-      setMyArtists(myArtistData)
-    }
-    if (props.currentUser) {
-      fetchMyArtists()
-    }
-    }, [props.currentUser])
+  // useEffect(() => {
+  //   const fetchMyArtists = async () => {
+  //     const myArtistData = await getAllArtists()
+  //     setMyArtists(myArtistData)
+  //   }
+  //   if (props.currentUser) {
+  //     fetchMyArtists()
+  //   }
+  //   }, [props.currentUser])
   
     return (
       <div className = "artists">
         <h3>Artists</h3>
         <br/>
         {
-          myArtists.map(artist => (
+          props.artists.map(artist => (
             <div className = "detes">
               <h5 key = {artist.id}> {artist.name}</h5>
               <img src={artist.imgURL} alt="artist img" key={artist.imgURL.id} />
