@@ -6,7 +6,6 @@ export default function CreateSong(props) {
   const [formData, setFormData] = useState({
     name: "",
     imgURL: "",
-    album: "",
     artist: ""
   })
 
@@ -22,11 +21,11 @@ export default function CreateSong(props) {
     <form onSubmit={(e) => {
       e.preventDefault();
       console.log("I am reaching handleCreate")
-      props.handleCreate(formData);
+      props.newCreate(formData);
       console.log("I have submitted")
     }}>
-      <h3>Add Artist</h3>
-      <label>Artist Name:
+      <h3>Add Song</h3>
+      <label>Song Name:
         <input
           type='text'
           name='name'
@@ -34,11 +33,20 @@ export default function CreateSong(props) {
           onChange={handleChange}
         />
       </label>
-      <label>Artist Image:
+      <label>Song Image:
         <input
           type='text'
           name='imgURL'
           value={formData.imgURL}
+          onChange={handleChange}
+        />
+      </label>
+
+      <label>Artist:
+        <input
+          type='text'
+          name='artist'
+          value={formData.artist}
           onChange={handleChange}
         />
       </label>

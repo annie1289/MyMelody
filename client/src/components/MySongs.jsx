@@ -1,20 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { getAllSongs } from '../services/songs'
-import './Artists.css'
+import React from 'react'
+import './artists/Artists.css'
 import { Link } from 'react-router-dom'
 export default function MySongs(props) {
-  
-  // const [mySongs, setMySongs] = useState([])
-
-  // useEffect(() => {
-  //   const fetchMySongs = async () => {
-  //     const mySongData = await getAllSongs()
-  //     setMySongs(mySongData)
-  //   }
-  //   if (props.currentUser) {
-  //     fetchMySongs()
-  //   }
-  //   }, [props.currentUser])
   
     return (
       <div className = "songs">

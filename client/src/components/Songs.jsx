@@ -1,5 +1,5 @@
 import React from 'react'
-import './Artists.css'
+import './artists/Artists.css'
 export default function Songs(props) {
   
   return (

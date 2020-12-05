@@ -2,14 +2,15 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { Route, useHistory, Switch } from 'react-router-dom';
 import Songs from '../components/Songs'
-import { getAllSongs } from '../services/songs'
-import Artists from '../components/Artists'
+import { getAllSongs, postSong } from '../services/songs'
+import Artists from '../components/artists/Artists'
 import { getAllArtists, postArtist, putArtist, destroyArtist } from '../services/artists'
-import AddArtist from '../screens/addartist/AddArtist';
+import AddArtist from '../screens/artist/AddArtist';
 import './MainContainer.css'
-import EditArtist from '../screens/EditArtist'
-import Footer from '../components/Footer';
+import EditArtist from '../screens/artist/EditArtist'
+import Footer from '../components/footer/Footer';
 import MySongs from '../components/MySongs';
+import CreateSong from '../screens/song/CreateSong';
 export default function MainContainer(props) {
 
   const [songs, setSongs] = useState([]);
@@ -36,6 +37,12 @@ export default function MainContainer(props) {
     history.push('/artists');
     console.log(history)
   }
+
+  const newCreate = async (songData) => {
+    const newSong = await postSong(songData);
+    setSongs(prevState => [...prevState, newSong]);
+    history.push('/songs');
+  }
   const handleUpdate = async (id, artistData) => {
     const updatedArtist = await putArtist(id, artistData);
     setArtists(prevState => prevState.map(artist => {
@@ -48,20 +55,21 @@ export default function MainContainer(props) {
     setArtists(prevState => prevState.filter(artist => artist.id !== id))
   }
   return (
-    <div className="main">
-       <Route path='/artists/:id/edit'>Edit Artist
+    <Switch>
+      <Route path='/artists/:id/edit'>Edit Artist
          <EditArtist artists={artists} handleUpdate={handleUpdate}/>
-      </Route> 
-            <br/>
+        </Route> 
         <Route path='/addartist'>
           <AddArtist handleCreate={handleCreate} />
         </Route>
-            <br/>
+        <Route path='/addsong'>
+          <CreateSong newCreate={newCreate} />
+        </Route>
         <Route path='/artists'>
-          <Artists currentUser={props.currentUser} handleDelete={handleDelete} artists={artists}/>
+          <Artists currentUser={props.currentUser} handleDelete={handleDelete} artists={artists}/>  
           <MySongs songs={songs} currentUser={props.currentUser} handleDelete={handleDelete}/>
         </Route>
       <Footer/>
-    </div>
+      </Switch>
   )
 }

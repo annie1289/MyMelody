@@ -4,18 +4,15 @@
   flex-direction: row;
   justify-content: center;
   background-color: #D49985;
-  font-family: 'ZCOOL KuaiLe', cursive;
+  
 
 }
 .icon{
-  margin-left: 50px;
-  margin-top: 40px;
-
-  
+  margin-top: 40px;  
 }
 .mainTitle{
-align-items: center;
 font-size: 40px;
+font-family: 'ZCOOL KuaiLe', cursive;
 
 }
 
@@ -26,20 +23,24 @@ font-size: 40px;
 
 }
 
-.logout{
-  margin-left: 50px;
-  width: 70px;
+button{
+  margin-left: 15px;
+  width: 75px;
   height: 40px;
   margin-top: 30px;
   font-weight: 3px;
-  background-color: rgb(173, 169, 173);
+  font-size: 15px;
   border-color: black;
-  border-radius: 5px;
-  font-family: inherit;
+  border-radius: 12px;
+  /* border-radius: 5px; */
 }
 
 .logout:hover {
-  background-color: #874647; /* Green */
+  background-color: #874647; 
   color: white;
+}
+
+.span{
+  color: rgb(69, 22, 224);
 }
 

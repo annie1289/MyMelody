@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
 import './Header.css'
 import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
 
@@ -13,7 +12,7 @@ export default function Header(props) {
       {
         currentUser ?
           <>
-            <p className = "userBanner">Nice to see you, {currentUser.username}</p>
+            <p className = "userBanner">Nice to see you, <span className = "span">{currentUser.username}</span></p>
             <button onClick={handleLogout} className = "logout">Logout</button>
           </>
           :
