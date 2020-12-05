@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { Route, useHistory, Switch } from 'react-router-dom';
 import Songs from '../components/Songs'
-import { getAllSongs, postSong } from '../services/songs'
+import { destroySong, getAllSongs, postSong, putSong } from '../services/songs'
 import Artists from '../components/artists/Artists'
 import { getAllArtists, postArtist, putArtist, destroyArtist } from '../services/artists'
 import AddArtist from '../screens/artist/AddArtist';
@@ -11,6 +11,8 @@ import EditArtist from '../screens/artist/EditArtist'
 import Footer from '../components/footer/Footer';
 import MySongs from '../components/MySongs';
 import CreateSong from '../screens/song/CreateSong';
+import EditSong from '../screens/song/EditSong'
+
 export default function MainContainer(props) {
 
   const [songs, setSongs] = useState([]);
@@ -41,7 +43,7 @@ export default function MainContainer(props) {
   const newCreate = async (songData) => {
     const newSong = await postSong(songData);
     setSongs(prevState => [...prevState, newSong]);
-    history.push('/songs');
+    history.push('/artists');
   }
   const handleUpdate = async (id, artistData) => {
     const updatedArtist = await putArtist(id, artistData);
@@ -50,14 +52,29 @@ export default function MainContainer(props) {
     }))
     history.push('/artists');
   }
+  const newUpdate = async (id, songData) => {
+    const updatedSong = await putSong(id, songData);
+    setSongs(prevState => prevState.map(song => {
+      return song.id === Number(id) ? updatedSong : song
+    }))
+    history.push('/artists');
+  }
   const handleDelete = async (id) => {
     await destroyArtist(id);
     setArtists(prevState => prevState.filter(artist => artist.id !== id))
+  }
+
+  const newDelete = async (id) => {
+    await destroySong(id);
+    setSongs(prevState => prevState.filter(song => song.id !== id))
   }
   return (
     <Switch>
       <Route path='/artists/:id/edit'>Edit Artist
          <EditArtist artists={artists} handleUpdate={handleUpdate}/>
+      </Route> 
+      <Route path='/songs/:id/edit'>Edit Songs
+         <EditSong songs={songs} newUpdate={newUpdate}/>
         </Route> 
         <Route path='/addartist'>
           <AddArtist handleCreate={handleCreate} />
@@ -67,7 +84,7 @@ export default function MainContainer(props) {
         </Route>
         <Route path='/artists'>
           <Artists currentUser={props.currentUser} handleDelete={handleDelete} artists={artists}/>  
-          <MySongs songs={songs} currentUser={props.currentUser} handleDelete={handleDelete}/>
+          <MySongs songs={songs} currentUser={props.currentUser} newDelete={newDelete}/>
         </Route>
       <Footer/>
       </Switch>

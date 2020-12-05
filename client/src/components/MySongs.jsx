@@ -14,7 +14,7 @@ export default function MySongs(props) {
               <img src={song.imgURL} alt="song img" key={song.imgURL.id} />
               <div className = "buttons">
               <Link to={`/songs/${song.id}/edit`}><button className = "edit">Edit</button></Link>
-              <button onClick={() => props.handleDelete(song.id)} className = "delete">Delete</button>
+              <button onClick={() => props.newDelete(song.id)} className = "delete">Delete</button>
               </div>
         
             </div>
