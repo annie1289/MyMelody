@@ -10,20 +10,26 @@ export default function CreateSong(props) {
   })
 
   const handleChange = (e) => {
+    e.preventDefault();
     const { name, value } = e.target
     setSongInfo(prevState => ({
       ...prevState,
       [name]: value
-    }))
+    }
+    ))
   }
+//   const secondHandleChange = (e) => {
+//     const { name, value } = e.target 
+//     [name]: value
+//     SongInfo.artist_id: value
+// }
+
 
   return (
     <div>
       <form className = "songForm" onSubmit={(e) => {
         e.preventDefault()
-        console.log("I am reaching handleCreate")
         props.newCreate(songInfo)
-        console.log("I have submitted")
       }}>
       <h3>Add Song</h3>
       <label>Song Name:
@@ -53,11 +59,10 @@ export default function CreateSong(props) {
           onChange={handleChange}
         />
       </label>
-        <select onChange={handleChange}>
-        {/* <option disabled value='pineapple'>Select an Artist</option> */}
+        <select defaultValue = 'pineapple'  onChange={handleChange} name = 'artist_id' value={songInfo.artist_id}>
+        <option disabled value='pineapple'>Select an Artist</option>
             {props.artists.map(artist => (
               <option value={artist.id}>{artist.name}</option>
-              // songInfo.artist_id = artist.id
           ))}
         </select> <br/>
       <button className = "songSub">Submit</button>

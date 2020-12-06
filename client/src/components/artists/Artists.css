@@ -40,9 +40,20 @@ height: 300px;
 h5{
   font-size: 15px;
   margin-bottom: -20px;
+  font-family: 'Antic Slab', serif;
+
 }
 
 h3{
   font-size: 35px;
   font-family: 'Antic Slab', serif;
+}
+
+p{
+  font-family: 'Antic Slab', serif;
+
+}
+
+.songDetails{
+  margin-top: 50px;
 }

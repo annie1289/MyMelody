@@ -69,10 +69,10 @@ export default function MainContainer(props) {
 
   return (
     <Switch>
-      <Route path='/artists/:id/edit'>Edit Artist
+      <Route path='/artists/:id/edit'>
          <EditArtist artists={artists} handleUpdate={handleUpdate}/>
       </Route> 
-      <Route path='/songs/:id/edit'>Edit Songs
+      <Route path='/songs/:id/edit'>
          <EditSong songs={songs} newUpdate={newUpdate}/>
         </Route> 
         <Route path='/addartist'>
