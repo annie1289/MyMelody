@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap");
+
+.artistBack{
+  background-color: lavender;
+}
+
+label{
+  font-size: 20px;
+}
+
+.artistSub{
+  font-family: 'Antic Slab', serif;
+  margin-bottom: 50px;
+}
+
+button{
+  font-family: 'Antic Slab', serif;
+}
+
+button:hover{
+  background-color:#874647;
+}
+
+.artistForm{
+  margin-top: 100px;
+  border: 2px solid #203862;
+  width: 300px;
+  position: fixed;
+  left: 40%;
+  background-color: #F7E2CD;
+}
+
+.artistInput{
+  width: 150px;
+  border-radius: 5%;
+}

@@ -1,11 +1,17 @@
-a{
-  border-color: black;
+@import url("https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap");
+
+
+.homeb, .favb, .chartb{
+  background-color: cadetblue;
+  font-family: 'Antic Slab', serif;
+  font-size: 20px;
+  width: 180px;
+  border-radius: 0px;
 
 }
 
-.homeb, .faveb, .chartb{
-  border-color: black;
-  background-color: cadetblue;
 
+.footer{
+  font-size: 35px;
 }
 

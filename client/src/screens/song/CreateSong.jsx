@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import './CreateSong.css'
 export default function CreateSong(props) {
 
   const [songInfo, setSongInfo] = useState({
@@ -7,7 +7,6 @@ export default function CreateSong(props) {
     album: "",
     imgURL: "",
     artist_id: ""
-  
   })
 
   const handleChange = (e) => {
@@ -20,45 +19,48 @@ export default function CreateSong(props) {
 
   return (
     <div>
-      <form onSubmit={(e) => {
+      <form className = "songForm" onSubmit={(e) => {
         e.preventDefault()
         console.log("I am reaching handleCreate")
         props.newCreate(songInfo)
         console.log("I have submitted")
-
-            }}>
+      }}>
       <h3>Add Song</h3>
       <label>Song Name:
         <input
+          className = "songInput"
           type='text'
           name='name'
           value={songInfo.name}
           onChange={handleChange}
         />
-      </label>
-      <label>Album:
+      </label> <br/>
+      <label className = "albumLabel">Album:
         <input
+          className = "albumInput"
           type='text'
           name='album'
           value={songInfo.album}
           onChange={handleChange}
         />
-      </label>
+      </label> <br/>
       <label>Song Image:
         <input
+          className = "songInput"
           type='text'
           name='imgURL'
           value={songInfo.imgURL}
           onChange={handleChange}
         />
       </label>
-        <select defaultValue="default" onChange={handleChange} value = {songInfo.artist_id}>
-        <option value="default">Select an Artist</option>
+        <select onChange={handleChange}>
+        {/* <option disabled value='pineapple'>Select an Artist</option> */}
             {props.artists.map(artist => (
-          <option value={artist.id} key={artist.id}>{artist.name}</option>
+              <option value={artist.id}>{artist.name}</option>
+              // songInfo.artist_id = artist.id
           ))}
-        </select>
-      <button>Submit</button>
+        </select> <br/>
+      <button className = "songSub">Submit</button>
     </form>
     </div>
   )

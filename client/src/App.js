@@ -28,7 +28,7 @@ function App() {
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    history.push('/artists');
+    history.push('/home');
   }
 
   const handleRegister = async (registerData) => {

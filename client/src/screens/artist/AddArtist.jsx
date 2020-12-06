@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import './AddArtist.css'
 
 export default function AddArtist(props) {
   const [formData, setFormData] = useState({
@@ -16,7 +16,8 @@ export default function AddArtist(props) {
   }
 
   return (
-    <form onSubmit={(e) => {
+    <div className = "artistBack">
+    <form className = "artistForm" onSubmit={(e) => {
       e.preventDefault();
       console.log("I am reaching handleCreate")
       props.handleCreate(formData);
@@ -25,21 +26,25 @@ export default function AddArtist(props) {
       <h3>Add Artist</h3>
       <label>Artist Name:
         <input
+          className = "artistInput"
           type='text'
           name='name'
           value={formData.name}
           onChange={handleChange}
         />
       </label>
+      <br/>
       <label>Artist Image:
         <input
+          className = "artistInput"
           type='text'
           name='imgURL'
           value={formData.imgURL}
           onChange={handleChange}
         />
-      </label>
-      <button>Submit</button>
-    </form>
+      </label> <br/>
+      <button className="artistSub">Submit</button>
+      </form>
+      </div>
   )
 }

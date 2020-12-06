@@ -1,8 +1,18 @@
 .create-song, .create-artist{
   padding: 20px;
+  width: 300px;
+  height: 100px;
+  border-radius: 5%;
+  font-family: 'Antic Slab', serif;
+  font-size: 30px;
+  border: 2px solid #203862;
+ 
 }
 
-.create-song{
-  margin-bottom: 20px;
-  margin-top: 20px;
+.create-artist{
+  margin-bottom: 100px;
+}
+
+.create-artist:hover, .create-song:hover{
+  background-color:#874647;
 }

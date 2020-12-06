@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap");
+
+.artistBack{
+  background-color: lavender;
+}
+
+.songSub{
+  font-family: 'Antic Slab', serif;
+  margin-bottom: 50px;
+}
+
+
+.songForm{
+  margin-top: 100px;
+  border: 2px solid #203862;
+  width: 300px;
+  position: fixed;
+  left: 40%;
+  background-color: #F7E2CD;
+}
+
+.songInput, .albumInput{
+  width: 150px;
+  border-radius: 5%;
+}
+
+.albumLabel{
+  margin-left: -50px;
+}
+
+.albumInput{
+  margin-right: -90px;
+}
+
+select{
+  font-family: 'Antic Slab', serif;
+  width: 150px;
+  height: 50px;
+  margin-top: 20px;
+  background-color: lavender;
+}

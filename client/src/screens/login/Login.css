@@ -2,8 +2,8 @@
 
 .signIn{
 padding-top: 50px;
-padding-left: 150px;
 font-family: 'Antic Slab', serif;
+color: white;
 
 }
 
@@ -14,14 +14,13 @@ font-family: 'Antic Slab', serif;
 
 input{
   background-color: tan;
-  border-radius: 10px;
   height: 20px;
   margin-bottom: 5px;
   width: 90px;
 }
 
 .loginForm{
-  background: url("https://desktopwalls.net/wp-content/uploads/2014/11/Retro%20Cassette%20Tapes%20Simple%20Desktop%20Wallpaper.jpg") no-repeat center center fixed;
+  background: url("https://i.pinimg.com/originals/84/fb/da/84fbdac0f75c9293a5b1cf58361d88f6.jpg") no-repeat center center fixed;
   position: fixed;
   min-height: 100%;
   min-width: 100%;
@@ -33,5 +32,5 @@ input{
 }
 
 .registerLink{
-  font-size: 15px;
-}
+  font-size: 25px;
+  background-color: rgb(241, 213, 241)}
