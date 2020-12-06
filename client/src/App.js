@@ -8,6 +8,7 @@ import Login from './screens/login/Login';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 import Layout from './layouts/Layout';
 import MainLanding from './screens/mainlanding/MainLanding';
+import Footer from './components/footer/Footer';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -55,7 +56,8 @@ function App() {
           <Registration handleRegister={handleRegister} />
         </Route>
         <Route path='/home'>
-          <MainLanding/>
+          <MainLanding />
+          <Footer/>
         </Route>
         <Route path='/'>
           <MainContainer currentUser={currentUser}/>

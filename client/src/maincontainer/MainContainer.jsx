@@ -34,17 +34,15 @@ export default function MainContainer(props) {
 
   const handleCreate = async (artistData) => {
     const newArtist = await postArtist(artistData);
-    console.log(newArtist)
     setArtists(prevState => [...prevState, newArtist]);
     history.push('/artists');
-    console.log(history)
   }
-
   const newCreate = async (songData) => {
     const newSong = await postSong(songData);
     setSongs(prevState => [...prevState, newSong]);
     history.push('/artists');
   }
+ 
   const handleUpdate = async (id, artistData) => {
     const updatedArtist = await putArtist(id, artistData);
     setArtists(prevState => prevState.map(artist => {
@@ -68,6 +66,7 @@ export default function MainContainer(props) {
     await destroySong(id);
     setSongs(prevState => prevState.filter(song => song.id !== id))
   }
+
   return (
     <Switch>
       <Route path='/artists/:id/edit'>Edit Artist
@@ -80,12 +79,13 @@ export default function MainContainer(props) {
           <AddArtist handleCreate={handleCreate} />
         </Route>
         <Route path='/addsong'>
-          <CreateSong newCreate={newCreate} />
+          <CreateSong artists={artists} newCreate={newCreate} />
         </Route>
         <Route path='/artists'>
           <Artists currentUser={props.currentUser} handleDelete={handleDelete} artists={artists}/>  
           <MySongs songs={songs} currentUser={props.currentUser} newDelete={newDelete}/>
-        </Route>
+          <Footer/>
+      </Route>
       <Footer/>
       </Switch>
   )
