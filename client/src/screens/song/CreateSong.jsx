@@ -59,8 +59,8 @@ export default function CreateSong(props) {
           onChange={handleChange}
         />
       </label>
-        <select defaultValue = 'pineapple'  onChange={handleChange} name = 'artist_id' value={songInfo.artist_id}>
-        <option disabled value='pineapple'>Select an Artist</option>
+        <select onChange={handleChange} name = 'artist_id' value={songInfo.artist_id}>
+        <option value='pineapple'>Select an Artist</option>
             {props.artists.map(artist => (
               <option value={artist.id}>{artist.name}</option>
           ))}
