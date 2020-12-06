@@ -1,0 +1,13 @@
+ol{
+  text-align: justify;
+  list-style-position: inside;
+}
+
+.topArtists{
+  display: flex;
+  justify-content: center;
+}
+
+.chartz{
+  padding-bottom: 50px;
+}
