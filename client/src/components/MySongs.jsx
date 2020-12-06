@@ -5,7 +5,7 @@ export default function MySongs(props) {
   
     return (
       <div className = "songs">
-        <h3>Songs</h3>
+        <h3 className = "songz">Songs</h3>
         <br/>
         {
           props.songs.map(song => (
