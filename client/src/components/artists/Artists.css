@@ -16,7 +16,13 @@ img{
   border-radius: 50%;
 
 }
-
+.songImage{
+  width: 130px;
+  height: 130px;
+  border-radius: 0%;
+  padding: 0px;
+  margin-top: 40px;
+}
 .detes{
 display: flex;
 flex-direction: column;

@@ -9,11 +9,11 @@ export default function MySongs(props) {
         <br/>
         {
           props.songs.map(song => (
-            <div className = "songDetails">
+            <div className="songDetails">
+              <img src={song.imgURL} alt="song img" key={song.imgURL.id} className = "songImage"/>
               <h5 key={song.id}> {song.name}</h5> <br/>
-              <p>{song.album}</p>
-              <p>{song.artist?.name}</p>
-              <img src={song.imgURL} alt="song img" key={song.imgURL.id} />
+              <p>Album: {song.album}</p>
+              <p>Artist: {song.artist?.name}</p>
               <div className = "buttons">
               <Link to={`/songs/${song.id}/edit`}><button className = "edit">Edit</button></Link>
               <button onClick={() => props.newDelete(song.id)} className = "delete">Delete</button>

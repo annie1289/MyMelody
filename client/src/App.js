@@ -6,7 +6,7 @@ import MainContainer from './maincontainer/MainContainer';
 import Registration from './screens/Registration';
 import Login from './screens/login/Login';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
-import Layout from './layouts/Layout';
+import Header from './components/header/Header';
 import MainLanding from './screens/mainlanding/MainLanding';
 import Footer from './components/footer/Footer';
 
@@ -44,10 +44,11 @@ function App() {
     history.push('/login');
   }
   return (
-    <Layout
+    <div className = "App">
+    <Header
       currentUser={currentUser}
       handleLogout={handleLogout}
-    >
+    />
       <Switch>
         <Route path='/login'>
           <Login handleLogin={handleLogin}/>
@@ -63,7 +64,7 @@ function App() {
           <MainContainer currentUser={currentUser}/>
         </Route>
       </Switch>
-    </Layout>
+      </div>
   );
 }
 

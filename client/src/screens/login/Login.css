@@ -4,8 +4,9 @@
 padding-top: 50px;
 font-family: 'Antic Slab', serif;
 color: white;
-
 }
+
+
 
 .inputs{
   font-family: 'Antic Slab', serif;
@@ -29,6 +30,7 @@ input{
 .logging{
   margin-top: -900px;
   background-color: #F7E2CD;
+  margin-bottom: 30px;
 }
 
 .registerLink{
