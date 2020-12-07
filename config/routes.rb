@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'
   resources :users
-  # get '/users/:user_id/artists', to: 'artists#my_artists'
+  get '/charts', to: 'artists#find_all_artists'
 end

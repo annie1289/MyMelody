@@ -5,6 +5,10 @@ export const getAllArtists = async () => {
   return resp.data;
 };
 
+export const getCharts = async () => {
+  const resp = await api.get(`/charts`)
+  return resp.data
+}
 
 export const getOneArtist = async (id) => {
   const resp = await api.get(`/artists/${id}`);

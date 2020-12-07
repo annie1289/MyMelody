@@ -1,10 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import { Route, useHistory, Switch } from 'react-router-dom';
-import Songs from '../components/Songs'
 import { destroySong, getAllSongs, postSong, putSong } from '../services/songs'
 import Artists from '../components/artists/Artists'
-import { getAllArtists, postArtist, putArtist, destroyArtist } from '../services/artists'
+import { getAllArtists, postArtist, putArtist, destroyArtist, getCharts } from '../services/artists'
 import AddArtist from '../screens/artist/AddArtist';
 import './MainContainer.css'
 import EditArtist from '../screens/artist/EditArtist'
@@ -12,11 +11,13 @@ import Footer from '../components/footer/Footer';
 import MySongs from '../components/MySongs';
 import CreateSong from '../screens/song/CreateSong';
 import EditSong from '../screens/song/EditSong'
+import Charts from '../screens/charts/Charts.jsx'
 
 export default function MainContainer(props) {
 
   const [songs, setSongs] = useState([]);
   const [artists, setArtists] = useState([]);
+  const [allArtists, setAllArtists] = useState([]);
   const history = useHistory()
 
   useEffect(() => {
@@ -31,6 +32,15 @@ export default function MainContainer(props) {
     fetchArtists();
     fetchSongs();
   }, [props.currentUser])
+
+  useEffect(() => {
+    const fetchCharts = async () => {
+      const chartsData = await getCharts();
+      setAllArtists(chartsData)
+    }
+    fetchCharts();
+  },
+  [])
 
   const handleCreate = async (artistData) => {
     const newArtist = await postArtist(artistData);
@@ -80,6 +90,10 @@ export default function MainContainer(props) {
         </Route>
         <Route path='/addsong'>
           <CreateSong artists={artists} newCreate={newCreate} />
+      </Route>
+      <Route path='/charts'>
+        <Charts allArtists={allArtists} />
+        <Footer/>
         </Route>
         <Route path='/artists'>
           <Artists currentUser={props.currentUser} handleDelete={handleDelete} artists={artists}/>  

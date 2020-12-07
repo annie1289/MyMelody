@@ -1,6 +1,6 @@
 class ArtistsController < ApplicationController
   before_action :set_artist, only: [:show, :update, :destroy]
-  before_action :authorize_request, only: [:index, :create, :update, :destroy, :my_artists]
+  before_action :authorize_request, only: [:index, :create, :update, :destroy]
   # GET /users
   def index
     @artists = @current_user.artists
@@ -40,13 +40,8 @@ class ArtistsController < ApplicationController
     @artist.destroy
   end
 
-def my_artists 
-  @my_artists = @current_user.artists 
-  render json: @my_artists
-end
-
   def find_all_artists 
-    @artists = artist.all
+    @artists = Artist.all
     render json: @artists
   end
 
