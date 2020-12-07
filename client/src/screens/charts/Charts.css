@@ -1,13 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap");
+
 ol{
   text-align: justify;
   list-style-position: inside;
+  font-size: 20px;
+  color: #2A1A18;
+  font-family: 'Antic Slab', serif;
+
 }
 
 .topArtists{
   display: flex;
   justify-content: center;
+  padding-right: 50px;
+  background-color: #D49985;
 }
 
 .chartz{
   padding-bottom: 50px;
+}
+
+ol {
+  margin: 0 0 1.5em;
+  counter-reset: item;
+  margin-top: 80px;
+  background-color: #F7E2CD;
+  width: 300px;
+
+}
+
+ol > li {
+  margin: 0;
+  padding: 0 0 0 2em;
+  text-indent: -2em;
+  list-style-type: none;
+  counter-increment: item;
+}
+
+ol > li:before {
+  display: inline-block;
+  width: 1em;
+  padding-right: 0.5em;
+  font-weight: bold;
+  text-align: right;
+  content: counter(item) ".";
 }
