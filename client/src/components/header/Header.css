@@ -44,3 +44,22 @@ button{
   color: rgb(69, 22, 224);
 }
 
+@media (max-width: 500px){
+  .mainTitle{
+    font-size: 20px;
+  }
+
+  .intro, .userBanner{
+    margin-top: 15px;
+    margin-left: 20px;
+    
+  }
+  .icon{
+    margin-top:20px;
+  }
+  .logout{
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+}

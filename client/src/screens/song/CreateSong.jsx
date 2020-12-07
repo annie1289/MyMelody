@@ -18,12 +18,6 @@ export default function CreateSong(props) {
     }
     ))
   }
-//   const secondHandleChange = (e) => {
-//     const { name, value } = e.target 
-//     [name]: value
-//     SongInfo.artist_id: value
-// }
-
 
   return (
     <div>
