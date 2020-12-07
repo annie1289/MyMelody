@@ -20,7 +20,7 @@
 
 ## Overview
 
-**My Melody** is an app that allows users to track their favorite songs and albums. They can edit, update, and delete these entries and then view the most popular artists among all users across the platform. 
+**My Melody** is an app that allows users to track their favorite songs and artists. They can edit, update, and delete these entries and then view the most popular artists among all users across the platform. 
 
 <br>
 
@@ -31,7 +31,7 @@
  * Create User
  * Authentification
  * View, Create, Edit, and Delete Song Posts
- * View, Create, Edit, and Delete Album Posts
+ * View, Create, Edit, and Delete Artist Posts
 
 <br>
 
@@ -91,6 +91,8 @@ src
             |__components/
                   |__Header.jsx
                   |__Footer.jsx    
+                  |__Artists.jsx
+                  |__MySongs.jsx
             |__containers/
                   |__MainContainer.jsx
             |__screens/
@@ -99,8 +101,8 @@ src
                   |__MainLanding.jsx
                   |__CreateSong.jsx
                   |__EditSong.jsx
-                  |__CreateAlbum.jsx
-                  |__EditAlbum.jsx
+                  |__AddArtist.jsx
+                  |__EditArtist.jsx
                   |__Favorites.jsx
                   |__Charts.jsx
                   
@@ -109,7 +111,7 @@ src
       |__auth.js
       |__users.js
       |__songs.js
-      |__albums.js
+      |__artists.js
 
 ```
 
@@ -125,18 +127,18 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Setup Back end      |    H     |     5 hrs      |          |        |
-| Authentification    |    H     |     5 hrs      |          |        |
-| Full CRUD           |    H     |     10 hrs      |          |        |
-|  Header and Footer  |    H     |     3 hrs      |          |        |
-|   Main Landing Page |    H     |     3 hrs      |          |        |
-|  Create Pages       |    H     |     7 hrs      |          |        |
-|Registration Screen  |    H     |     3 hrs      |          |        |
-|      Favorites Page |    H     |     5 hrs      |          |        |
-|     CSS Styling     |    H     |     3 hrs      |          |        |
-|      Fix Bugs       |    L     |     3 hrs      |          |        |
+| Setup Back end      |    H     |     5 hrs      |          |  5      |
+| Authentification    |    H     |     5 hrs      |          |    5    |
+| Full CRUD           |    H     |     10 hrs      |          |     20   |
+|  Header and Footer  |    H     |     3 hrs      |          |     3   |
+|   Main Landing Page |    H     |     3 hrs      |          |   1     |
+|  Create Pages       |    H     |     7 hrs      |          |   5     |
+|Registration Screen  |    H     |     3 hrs      |          |   1     |
+|      Favorites Page |    H     |     5 hrs      |          |      10  |
+|     CSS Styling     |    H     |     3 hrs      |          |    3    |
+|      Fix Bugs       |    L     |     3 hrs      |          |  2      |
 
-| TOTAL               |          |     47 hrs      |           |        |
+| TOTAL               |          |     47 hrs      |           |    60 hrs    |
 
 
 <br>
@@ -164,9 +166,27 @@ src
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+> 
+`props.allArtists.sort((a, b) => (a.name > b.name) ? 1 : -1)
+
+  for (let i = 0; i < props.allArtists.length; i++){
+    
+    let totalCount = props.allArtists.filter(artist => artist.name === props.allArtists[i].name).length
+    props.allArtists[i].count = totalCount;
+
+}
+  props.allArtists.sort((a, b) => (b.count - a.count))
+  let unique = []
+  props.allArtists.forEach(element => {
+    if (!unique.includes(element.name)) {
+      unique.push(element.name)
+    }
+  })
+  `
+  I strung along a lot of js functions we've been using throughout the bootcamp for purposes of algorithms to complete the charts function for my final project. It was cool to use that functionality and those skills we had learned to solve this problem and break it down into parts, even though I think it could definitely be refactored to be more efficient. 
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+> Error: Request failed with status code 401
+> Faced errors related to authenification and a nil json web token
 
