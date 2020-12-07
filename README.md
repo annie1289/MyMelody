@@ -167,7 +167,8 @@ src
 ## Code Showcase
 
 
-`props.allArtists.sort((a, b) => (a.name > b.name) ? 1 : -1)
+```
+props.allArtists.sort((a, b) => (a.name > b.name) ? 1 : -1)
 
   for (let i = 0; i < props.allArtists.length; i++){
     let totalCount = props.allArtists.filter(artist => artist.name === props.allArtists[i].name).length
@@ -180,7 +181,7 @@ src
       unique.push(element.name)
     }
   })
-  `
+  ```
 I strung along a lot of js functions we've been using throughout the bootcamp for purposes of algorithms to complete the charts function for my final project. It was cool to use that functionality and those skills we had learned to solve this problem and break it down into parts, even though I think it could definitely be refactored to be more efficient. 
 
 ## Code Issues & Resolutions
